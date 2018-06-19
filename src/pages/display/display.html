@@ -1,0 +1,11 @@
+
+  <ion-list *ngFor="let i of arr2; let p =  index">
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../../assets/images/picture.jpg">
+      </ion-thumbnail>
+      <h2>{{i.name}} {{i.surname}} </h2>
+      <p>{{i.id}} {{i.role}}</p>
+      <button ion-button color="dark" style="width: 85%; text-align: center" (click)="showConfirm(p)">More</button>
+    </ion-item>
+  </ion-list>

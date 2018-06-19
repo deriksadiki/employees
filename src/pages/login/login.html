@@ -1,0 +1,16 @@
+
+
+  <ion-item>
+    <ion-label floating>Username</ion-label>
+    <ion-input #username  type="text" value=""></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Password</ion-label>
+    <ion-input #password  type="password" value=""></ion-input>
+  </ion-item>
+
+  <br>
+  <div id="ok">
+  <button ion-button style="width: 85%" (click) = "login(username.value,password.value)">Sign In</button>
+</div>
