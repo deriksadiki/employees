@@ -3,6 +3,7 @@ import {DomSanitizer} from '@angular/platform-browser';
 import arr from '../../app/array'
 import { AlertController } from 'ionic-angular';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {details} from '../../app/obj'
 
 /**
  * Generated class for the DisplayPage page.
@@ -46,5 +47,63 @@ showConfirm(p) {
   });
   confirm.present();
 }
+name2;
+surname2;
+id2;
+role2;
+update(id){
+
+  this.name2 = arr[id].name;
+  this.surname2 =arr[id].surname;
+  this.id2 =  arr[id].id;
+  this.role2 = arr[id].role;
+
+  const prompt = this.alertCtrl.create({
+    title: 'Update',
+    message: "Enter The New values",
+    inputs: [
+      {
+        name: 'name',
+        placeholder: arr[id].name
+      },
+      {
+        name: 'surname',
+        placeholder: arr[id].surname
+      },
+      {
+        name: 'ID',
+        placeholder: arr[id].id
+      },
+      {
+        name: 'Role',
+        placeholder: arr[id].role
+      },
+    ],
+    buttons: [
+      {
+        text: 'Cancel',
+        handler: data => {
+          console.log('Cancel clicked');
+        }
+      },
+      {
+        text: 'Save',
+        handler: data => {
+          if (data.name != ""){
+            let a = new details(data.name,  this.surname2, this.id2,  this.role2 );
+            arr[id] = a;
+          }
+          else if (data.surname != ""){
+            let a = new details(this.name2, data.surname, this.id2,  this.role2 );
+            arr[id] = a;
+          }
+        }
+      }
+    ]
+  });
+  prompt.present();
+}
 
 }
+
+

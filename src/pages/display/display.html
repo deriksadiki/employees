@@ -4,8 +4,10 @@
       <ion-thumbnail item-start>
         <img src="../../assets/images/picture.jpg">
       </ion-thumbnail>
+      <ion-item-divider>
       <h2>{{i.name}} {{i.surname}} </h2>
       <p>{{i.id}} {{i.role}}</p>
-      <button ion-button color="dark" style="width: 85%; text-align: center" (click)="showConfirm(p)">More</button>
+      <button ion-button color="dark" style="width: 40%; text-align: center" (click)="showConfirm(p)">Delete</button><button ion-button color="dark" style="width: 40%; text-align: center" (click)="update(p)">Update</button>
+    </ion-item-divider>
     </ion-item>
   </ion-list>
