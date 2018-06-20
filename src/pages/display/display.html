@@ -1,8 +1,9 @@
+<button ion-button color="dark" style="width: 40%; text-align: center" (click)="back()">Back</button>
 
   <ion-list *ngFor="let i of arr2; let p =  index">
     <ion-item>
       <ion-thumbnail item-start>
-        <img src="../../assets/images/picture.jpg">
+        <img [src]="i.pic">
       </ion-thumbnail>
       <ion-item-divider>
       <h2>{{i.name}} {{i.surname}} </h2>
@@ -11,3 +12,5 @@
     </ion-item-divider>
     </ion-item>
   </ion-list>
+
+ 

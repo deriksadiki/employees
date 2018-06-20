@@ -25,9 +25,12 @@ export class HomePage {
    
   }
 
-  addEmp2 = function (name:string, surname:string, id:string, role:string)
+
+
+  addEmp = function (name:string, surname:string, id:string, role:string)
   {  
-    
+   
+
      const alert = this.alertCtrl.create({
      title: 'New Employee was successfully added!',
       subTitle: 'You can add more if you want',
@@ -37,7 +40,15 @@ export class HomePage {
      });
      
     if (name != "" && surname != "" && id != "" && role != ""){
-    let a = new details(name,surname,id,role, this.sanitizer.bypassSecurityTrustResourceUrl(this.pic));
+       var re = /images/gi; 
+    var str = this.pic;
+    var newstr = str.replace(re, " "); 
+    var str2 =  newstr
+    var splitted = str2.split(" ", 2); 
+    var i  = splitted[1];
+    i = "../../assets/images/" + i.substr(1,i.length); 
+    this.pic = i;
+    let a = new details(name,surname,id,role, this.pic);
     arr.push(a);
     alert.present();
     }

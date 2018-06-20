@@ -20,10 +20,12 @@ import {details} from '../../app/obj'
 export class DisplayPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,private sanitizer: DomSanitizer,public alertCtrl: AlertController) {
+  
   }
 
 arr2 = arr;
-imgurl;
+imgurl ;
+
 
 showConfirm(p) {
   const confirm = this.alertCtrl.create({
@@ -47,11 +49,16 @@ showConfirm(p) {
   });
   confirm.present();
 }
+
+back  = function() {
+  this.navCtrl.pop();
+}
 name2;
 surname2;
 id2;
 role2;
 update(id){
+  
 
   this.name2 = arr[id].name;
   this.surname2 =arr[id].surname;
@@ -90,11 +97,11 @@ update(id){
         text: 'Save',
         handler: data => {
           if (data.name != ""){
-            let a = new details(data.name,  this.surname2, this.id2,  this.role2 );
+            let a = new details(data.name,  this.surname2, this.id2,  this.role2,arr[id].pic);
             arr[id] = a;
           }
           else if (data.surname != ""){
-            let a = new details(this.name2, data.surname, this.id2,  this.role2 );
+            let a = new details(this.name2, data.surname, this.id2,  this.role2 ,arr[id].pic);
             arr[id] = a;
           }
         }
