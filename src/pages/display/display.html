@@ -1,6 +1,6 @@
 <button ion-button color="dark" style="width: 40%; text-align: center" (click)="back()">Back</button>
 
-  <ion-list *ngFor="let i of arr2; let p =  index">
+  <ion-card *ngFor="let i of arr2; let p =  index">
     <ion-item>
       <ion-thumbnail item-start>
         <img [src]="i.pic">
@@ -11,6 +11,6 @@
       <button ion-button color="dark" style="width: 40%; text-align: center" (click)="showConfirm(p)">Delete</button><button ion-button color="dark" style="width: 40%; text-align: center" (click)="update(p)">Update</button>
     </ion-item-divider>
     </ion-item>
-  </ion-list>
+  </ion-card>
 
  

@@ -27,7 +27,7 @@ export class HomePage {
 
 
 
-  addEmp = function (name:string, surname:string, id:string, role:string)
+  addEmp2 = function (name:string, surname:string, id:string, role:string)
   {  
    
 
