@@ -5,6 +5,8 @@ import {LoginPage} from '../login/login';
 import {DomSanitizer} from '@angular/platform-browser';
 import arr from '../../app/array'
 import { DisplayPage } from '../display/display';
+import { ModalController } from 'ionic-angular';
+
 
 
 
