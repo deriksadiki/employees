@@ -40,7 +40,7 @@ export class LoginPage {
       const  err = this.alertCtrl.create({
         title:'Sign In unsuccessfull',
         message: 'please enter the correct details',
-        buttons:['ok']
+        buttons:['Ok']
       });
       err.present();
     }

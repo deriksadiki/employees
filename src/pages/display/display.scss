@@ -9,7 +9,12 @@ img{
 
 #oo{
     text-align: center;
-    margin: 0 auto;
-    justify-content: center;
     
+}
+.item.item-trns{
+	border-color: rgba(0, 0, 0, 0);
+	background-color: rgba(0, 0, 0, 0);
+    border: 2px solid rgb(120, 139, 148);
+    border-radius: 20px;
+    color: white;
 }

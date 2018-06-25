@@ -30,7 +30,6 @@ url:any;
          this.url = event.target.result;
        }
        reader.readAsDataURL(event.target.files[0]);
-       console.log(event.target.files);
      }
    }
    
