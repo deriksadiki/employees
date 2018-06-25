@@ -20,14 +20,23 @@ export class HomePage {
   constructor(public alertCtrl: AlertController,private sanitizer: DomSanitizer,public navCtrl: NavController) { }
 
  
-  pic;
+url:any;
 
-  picture2(event){
-    this.pic = event.target.value;
+    insertpic =  function (event:any){
+     if (event.target.files && event.target.files[0]){
+       let reader = new FileReader();
    
-  }
+       reader.onload = (event:any) =>{
+         this.url = event.target.result;
+       }
+       reader.readAsDataURL(event.target.files[0]);
+       console.log(event.target.files);
+     }
+   }
+   
+  
 
-
+  
 
   addEmp2 = function (name:string, surname:string, id:string, role:string)
   {  
@@ -42,15 +51,8 @@ export class HomePage {
      });
      
     if (name != "" && surname != "" && id != "" && role != ""){
-       var re = /images/gi; 
-    var str = this.pic;
-    var newstr = str.replace(re, " "); 
-    var str2 =  newstr
-    var splitted = str2.split(" ", 2); 
-    var i  = splitted[1];
-    i = "../../assets/images/" + i.substr(1,i.length); 
-    this.pic = i;
-    let a = new details(name,surname,id,role, this.pic);
+    
+    let a = new details(name,surname,id,role, this.url);
     arr.push(a);
     alert.present();
     }
@@ -67,8 +69,8 @@ export class details{
   surname:string;
   id:string;
   role:string;
-  pic:string;
-  constructor(name:string,surname:string,id:string,role:string,pic:string){
+  pic:any;
+  constructor(name:string,surname:string,id:string,role:string,pic:any){
           this.name = name;
           this.surname = surname;
           this.id = id;

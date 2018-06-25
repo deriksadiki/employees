@@ -3,3 +3,33 @@
     justify-content: center;
     text-align: center;
 }
+
+#con{
+    margin: auto;
+    width: 90%;
+    position: relative;
+    top: 270px;
+ 
+}
+.item.item-trns, .header,.navbar, .title {
+	border-color: rgba(0, 0, 0, 0);
+	background-color: rgba(0, 0, 0, 0);
+    border: 2px solid rgb(120, 139, 148);
+    border-radius: 20px;
+    color: white;
+}
+.page{
+ background-image: url('../../assets/images/pic22.jpg');   
+ height: 1000px;
+}
+
+.icon{
+    font-size: 150%;
+}
+#lu{
+    margin: auto;
+    width: 70%;
+    position: relative;
+    top: 100px;
+   text-align: center;
+}

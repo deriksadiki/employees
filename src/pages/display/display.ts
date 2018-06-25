@@ -104,6 +104,16 @@ update(id){
             let a = new details(this.name2, data.surname, this.id2,  this.role2 ,arr[id].pic);
             arr[id] = a;
           }
+          else if (data.id != "")
+          {
+            let a = new details(this.name2, this.surname2, data.id,  this.role2 ,arr[id].pic);
+            arr[id] = a;
+          }
+          else if (data.role != "")
+          {
+            let a = new details(this.name2, this.surname2, this.id2,  data.role ,arr[id].pic);
+            arr[id] = a; 
+          }
         }
       }
     ]

@@ -1,12 +1,7 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Add Employee
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-<br>
-<br>
+<div class="page">
+  <div id="oo">
+  <button ion-button round style="width: 50%;" (click)="back()">Back</button>
+</div>
 <br>
   <ion-card *ngFor="let i of arr2; let p =  index">
   
@@ -19,6 +14,7 @@
       <button ion-button color="dark" style="width: 40%; text-align: center" (click)="showConfirm(p)">Delete</button><button ion-button color="dark" style="width: 40%; text-align: center" (click)="update(p)">Update</button>
     </ion-item>
   </ion-card>
+</div>
 
 
  

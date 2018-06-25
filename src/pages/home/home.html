@@ -1,35 +1,40 @@
 
+<br>
+<div class="page">
+    <br>
+    <br>
+    
 <ion-card>
-  <ion-item class="ion">
+  <ion-item class="item item-trns text-center">
     <ion-label floating>First Name</ion-label>
     <ion-input #name  type="text" value=""></ion-input>
   </ion-item>
 </ion-card>
 
 <ion-card>
-  <ion-item class="ion">
+  <ion-item class="item item-trns text-center">
     <ion-label  floating>Last Surname</ion-label>
     <ion-input #surname type="text"></ion-input>
   </ion-item>
 </ion-card>
 
-<ion-card >
-  <ion-item class="ion">
+<ion-card class="item item-trns text-center">
+  <ion-item class="item item-trns text-center">
     <ion-label floating>Id No</ion-label>
     <ion-input  #id type="text"></ion-input>
   </ion-item>
 </ion-card>
 
 <ion-card>
-  <ion-item class="ion">
+  <ion-item class="item item-trns text-center">
     <ion-label  floating>Role</ion-label>
     <ion-input #role type="text"></ion-input>
   </ion-item>
 </ion-card>
 
 <ion-card >
-  <ion-item class="ion">
-    <ion-input type="file" (change)="picture2($event)"></ion-input>
+  <ion-item class="item item-trns text-center">
+    <input type="file" (change)="insertpic($event)">
   </ion-item>
 </ion-card>
 
@@ -37,7 +42,7 @@
 <button ion-button (click)="addEmp2(name.value,surname.value,id.value,role.value)" round>Add employee </button><br>
 <button ion-button (click)="view()" round>View Employees</button>
 </div>
-
+</div>
 
 
 
